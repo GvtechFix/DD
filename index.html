@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DD</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+  .icon-row {
+            display: flex;
+            align-items: center;
+            padding-bottom:50px;
+        }
+
+        .icon {
+            margin-right: 10px; /* Adjust the margin as needed */
+        }
+</style>
+</head>
+<body class="w3-content" style="max-width:1200px; background-color:#01080E">
+
+<!-- Sidebar/menu -->
+<nav style="z-index:3;width:250px;background-color:#01080E" id="mySidebar" class="w3-sidebar w3-bar-block w3-collapse w3-top" >
+  <div class="w3-container w3-align-center w3-display-container w3-padding-16" >
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><a class="navbar-brand" href="index.html"><img src="DD Logo.png" alt="DD" width="200" height="100" ></a></h3>
+  </div>
+  <div class="w3-padding-20 w3-large w3-text-white" style="text-align:center; font-weight:bold">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="#Divya" class="w3-bar-item w3-button">108 Divyadesams</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-left-align" id="myBtn">
+      Yatra <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#yatra" class="w3-bar-item w3-button w3-light-white"><i class="fa fa-caret-right w3-margin-right"></i>13  Malai  Nadu  Yatra    ( Kerala )</a>
+      <a href="#yatra" class="w3-bar-item w3-button">40 Chola Nadu Yatra</a>
+      <a href="#yatra" class="w3-bar-item w3-button">18 Pandiya Nadu Yatra</a>
+      <a href="#yatra" class="w3-bar-item w3-button">22 Thondai Nadu Yatra</a>
+    </div>
+    <a href="#nava" class="w3-bar-item w3-button">Ahobilam Nava Narasimhar</a>
+    <a href="#abimana" class="w3-bar-item w3-button">Abimana Sthalangal</a>
+    <a href="#set" class="w3-bar-item w3-button">A Set of Temples</a>
+    <a href="#sree" class="w3-bar-item w3-button">Sree Vaishnava Temples</a>
+    <a href="#other" class="w3-bar-item w3-button">Other Familiar Temples</a>
+    <a onclick="myAccFunc1()" href="javascript:void(0)" class="w3-button w3-block w3-left-align" id="myBtn1">
+      Divyadesams Yatra <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc1" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#desam" class="w3-bar-item w3-button w3-light-white"><i class="fa fa-caret-right w3-margin-right"></i>13  Malai  Nadu  Yatra    ( Kerala )</a>
+      <a href="#desam" class="w3-bar-item w3-button">95 Divyadesams Yatra</a>
+      <a href="#desam" class="w3-bar-item w3-button">31 Divyadesams Yatra</a>
+      <a href="#desam" class="w3-bar-item w3-button">64 Divyadesams Yatra</a>
+    </div>
+    <a href="#feedback" class="w3-bar-item w3-button">Our Clients Feedback</a>
+  </div>
+  <br><br>
+<div class="icon-row" >
+    <a href="https://www.facebook.com/" style="color:white" target="_blank" style="margin:10px"><img src="facebook.jpg" width="50" height="50"></a>
+    <a href="https://www.instagram.com/" style="color:white" target="_blank"><img src="instagram.jpg" width="50" height="50"></a>
+    <a href="https://twitter.com/" style="color:white" target="_blank"><img src="twitter.png" width="50" height="50"></a>
+    <a href="https://www.google.com/" style="color:white" target="_blank"><img src="google.jpg" width="50" height="50"></a>
+ </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">DD</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left">Jeans</p>
+    <p class="w3-right">
+      <i class="fa fa-shopping-cart w3-margin-right"></i>
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <div class="w3-display-container w3-container">
+    <img src="travel.jpg" style="margin-top:0px; margin-left:20px;width:103% ">
+    <div class="w3-display-topleft w3-text-white" style="padding:30px 60px">
+      <h1 class="w3-jumbo w3-hide-small">New Journey</h1>
+      <h1 class="w3-hide-large w3-hide-medium">New Journey</h1>
+      <h1 class="w3-hide-small">COLLECTION 2024</h1>
+      <p><a href="#Divya" class="w3-button w3-white w3-padding-large w3-large">Travel</a></p>
+    </div>
+  </div>
+<br><br><br>
+
+  <!-- Product grid -->
+  <div id="Divya" style="padding:0px 0px 0px 15px" class="w3-row w3-text-white ">
+    <h1>108 Divyadesams</h1><br><br>
+    <div class="w3-col l3 s6">
+
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Divyadesams [1-14]<br><b>$24.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Divyadesams [15-28]<br><b>$19.99</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container w3-text-white">
+          <img src="travel.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-white">Pay now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Divyadesams [29-43]<br><b>$19.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Divyadesams [44-58]<br><b>$20.50</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Divyadesams [59-73]<br><b>$20.50</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="travel.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft"></span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-white">Pay now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Divyadesams [74-88]<br><b class="w3-text-white">$14.99</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Divyadesams [89-93]<br><b>$14.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Divyadesams [94-108]<br><b>$24.99</b></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="yatra" style="padding:0px 0px 0px 15px" class="w3-row w3-text-white">
+    <h1>Yatra</h1><br><br>
+    <div class="w3-col l3 s6">
+
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>13 Malai Nadu Yatra ( Kerala )<br><b>$24.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>40 Chola Nadu Yatra<br><b>$19.99</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>18 Pandiya Nadu Yatra<br><b>$20.50</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="travel.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft"></span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-white">Pay now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>22 Thondai Nadu Yatra<br><b class="w3-text-white">$14.99</b></p>
+      </div>
+    </div>
+<br><br>
+
+
+  <div id="nava" style="padding:0px 0px 0px 15px" class="w3-row w3-text-white">
+    <h1>Ahobilam Nava Narasimhar</h1><br><br>
+    <div class="w3-col l3 s6">
+
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Ahobilam Nava Narasimhar<br><b>$24.99</b></p>
+      </div>
+    </div>
+  </div>
+<br><br>
+
+  <div id="abimana" style="padding:0px 0px 0px 15px" class="w3-row w3-text-white">
+    <h1>Abimana Sthalangal</h1><br><br>
+    <div class="w3-col l3 s6">
+
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Abimana Sthalangal<br><b>$24.99</b></p>
+      </div>
+    </div>
+  </div>
+<br><br>
+
+  <div id="set" style="padding:0px 0px 0px 15px" class="w3-row w3-text-white">
+    <h1>A Set of Temples</h1><br><br>
+    <div class="w3-col l3 s6">
+
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Temple-1<br><b>$24.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Temple-2<br><b>$19.99</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container w3-text-white">
+          <img src="travel.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-white">Pay now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Temple-3<br><b>$19.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Temple-4<br><b>$20.50</b></p>
+      </div>
+    </div>
+    </div>
+  </div>
+<br><br>
+
+  <div id="sree" style="padding:0px 0px 0px 15px" class="w3-row w3-text-white">
+    <h1>Sree Vaishnava Temples</h1><br><br>
+    <div class="w3-col l3 s6">
+
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Sree Vaishnava Temples<br><b>$24.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Sree Vaishnava Temples<br><b>$19.99</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container w3-text-white">
+          <img src="travel.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-white">Pay now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Sree Vaishnava Temples<br><b>$19.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Sree Vaishnava Temples<br><b>$20.50</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Sree Vaishnava Temples<br><b>$20.50</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="travel.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft"></span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-white">Pay now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Sree Vaishnava Temples<br><b class="w3-text-white">$14.99</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Sree Vaishnava Temples<br><b>$14.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Sree Vaishnava Temples<br><b>$24.99</b></p>
+      </div>
+    </div>
+  </div>
+<br><br>
+  <div id="other" style="padding:0px 0px 0px 15px" class="w3-row w3-text-white">
+    <h1>Other Familiar Temples</h1><br><br>
+    <div class="w3-col l3 s6">
+
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Temple-1<br><b>$24.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Temple-2<br><b>$19.99</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container w3-text-white">
+          <img src="travel.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-white">Pay now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Temple-3<br><b>$19.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Temple-4<br><b>$20.50</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Temple-5<br><b>$20.50</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="travel.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft"></span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-white">Pay now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Temple-6<br><b class="w3-text-white">$14.99</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Temple-7<br><b>$14.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>Temple-8<br><b>$24.99</b></p>
+      </div>
+    </div>
+  </div>
+<br><br>
+  <div id="desam" style="padding:0px 0px 0px 15px" class="w3-row w3-text-white">
+    <h1>Divyadesams Yatra</h1><br><br>
+    <div class="w3-col l3 s6">
+
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>95 Divyadesams Yatra<br><b>$24.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>31 Divyadesams Yatra<br><b>$19.99</b></p>
+      </div>
+
+    <div class="w3-container">
+        <img src="travel.jpg" style="width:100%">
+        <p>64 Divyadesams Yatra<br><b>$19.99</b></p>
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+
+  <!-- Subscribe section -->
+  <div id="feedback" class="w3-container w3-white w3-padding-right-0 w3-padding-32 w3-margin-right-auto">
+    <h1>Our Clients Feedback</h1>
+    <p>To get special offers and VIP treatment:</p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+    <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+  </div>
+
+  <!-- Footer -->
+  <footer style="padding:0px 0px 0px 15px" class="w3-padding-right-0 w3-white w3-small w3-center" id="footer">
+    <div style="padding:0px 0px 0px 15px" class="w3-row-padding">
+      <div style="padding:0px 0px 0px 15px" class="w3-col s4">
+        <h4>Contact</h4>
+        <p>Questions? Go ahead.</p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
+          <button type="submit" class="w3-button w3-block w3-red">Send</button>
+        </form>
+      </div>
+
+      <div class="w3-col s4">
+        <h4>About</h4>
+        <p><a href="#">About us</a></p>
+        <p><a href="#">We're hiring</a></p>
+        <p><a href="#">Support</a></p>
+        <p><a href="#">Find store</a></p>
+        <p><a href="#">Shipment</a></p>
+        <p><a href="#">Payment</a></p>
+        <p><a href="#">Gift card</a></p>
+        <p><a href="#">Return</a></p>
+        <p><a href="#">Help</a></p>
+      </div>
+
+      <div class="w3-col s4 w3-justify">
+        <h4>Store</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i> 108-Divyadesams</p>
+        <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
+        <p><i class="fa fa-fw fa-envelope"></i> ex123@mail.com</p>
+        <h4>We accept</h4>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+        <br>
+        <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+        <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-white w3-center w3-padding-24">Powered by <a href="index.html" title="108-Divyadesams" target="_blank" class="w3-hover-opacity">108-Divyadesams</a></div>
+
+  <!-- End page content -->
+</div>
+
+
+
+<script>
+
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function myAccFunc1() {
+  var x = document.getElementById("demoAcc1");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn1").click();
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
